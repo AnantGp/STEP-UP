@@ -9,21 +9,20 @@ the common input shape and did not use external datasets or pretrained
 backbones.
 
 The backbone was a Siamese 3D CNN shared between left and right footsteps. The
-two 512-D foot embeddings were concatenated and passed through a fusion layer,
-then L2-normalized to obtain a stride embedding. We trained metric embeddings
-with Circle Loss (m=0.25, gamma=256), using class-balanced sampling over the
-training identities and validation EER for model selection. At inference,
-reference templates and probe strides were embedded with the same network.
-Claims were scored by cosine similarity against the claimed participant's
-reference prototype, computed as the normalized mean of the available reference
-embeddings.
+left and right foot embeddings were concatenated and passed through a fusion
+layer, then L2-normalized to obtain a 512-D stride embedding. We trained metric
+embeddings with Circle Loss (m=0.25, gamma=256), using validation EER for model
+selection. At inference, reference templates and probe strides were embedded
+with the same network. Claims were scored by cosine similarity against the
+claimed participant's reference prototype, computed as the normalized mean of
+the available reference embeddings.
 
 To reduce footwear/speed and cohort mismatch effects, we applied symmetric score
 normalization (S-norm) using training-set cohort embeddings. We generated S-norm
 variants using different cohort top-k values and reference aggregation rules.
 The submitted system fused two complementary calibrated score lists: the
-strongest Circle-loss S-norm ensemble and a secondary balanced S-norm model.
-Because raw score ranges differed across models, we converted each list to
-empirical ranks and used weighted rank fusion: 88.5% from the primary ensemble
-and 11.5% from the complementary top-400 mean S-norm model. The final scores.txt
-contained the fused claim scores and a fixed threshold file.
+strongest Circle-loss S-norm ensemble and a complementary top-400 mean S-norm
+model. Because raw score ranges differed across models, we converted each list
+to empirical ranks and used weighted rank fusion: 88.5% from the primary
+ensemble and 11.5% from the complementary top-400 mean S-norm model. The final
+scores.txt contained the fused claim scores and a fixed threshold file.
