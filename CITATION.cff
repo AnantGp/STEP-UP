@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "Please cite the competition summary paper when discussing this team's StepUP 2026 result."
+type: software
+title: "StepUP 2026: Biometric Footstep Verification"
+url: "https://github.com/AnantGp/STEP-UP"
+authors:
+  - family-names: Gupta
+    given-names: Anant
+    affiliation: "ArogyaPandit Private Limited, India"
+  - family-names: Gupta
+    given-names: Gourav
+    affiliation: "ArogyaPandit Private Limited, India"
+preferred-citation:
+  type: unpublished
+  title: "The 2nd International StepUP Competition for Biometric Footstep Recognition: From Steps to Strides"
+  authors:
+    - family-names: Larracy
+      given-names: Robyn
+    - family-names: Gupta
+      given-names: Anant
+    - family-names: Gupta
+      given-names: Gourav
+    - family-names: Eddy
+      given-names: Ethan
+    - family-names: Devanne
+      given-names: Maxime
+    - family-names: Meyer
+      given-names: Cyril
+    - family-names: Chiou
+      given-names: Jin-Chern
+    - family-names: Lee
+      given-names: Yueh-Shan
+    - family-names: Lu
+      given-names: Zong-Han
+    - family-names: Tabor
+      given-names: Aaron
+    - family-names: Scheme
+      given-names: Erik
+  year: 2026
+  doi: "10.48550/arXiv.2607.13905"
+  url: "https://arxiv.org/abs/2607.13905"
+  notes: "Public arXiv version; the record states acceptance to IJCB 2026."

@@ -1,5 +1,10 @@
 # Approach Description
 
+This is the short write-up supplied for the competition paper. For the precise
+behavior and scope of the current public code, see [method](method.md) and
+[reproduction](reproduction.md). In particular, prototype cosine and mean S-norm
+reference scoring are separate outputs; the final secondary stream uses the latter.
+
 Our final submission used an ensemble of two stride-level metric-learning systems
 trained only on the provided data. Participants 1-140 were used for
 training/cohort generation and participants 141-150 were reserved for
